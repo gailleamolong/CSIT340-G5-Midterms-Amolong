@@ -9,7 +9,7 @@ function App() {
       <Navbar />
 
       <Hero />
-
+      
       <main className="grid grid-cols-3 gap-8 px-20">
         <div className="rounded-xl bg-[#F3E6D5] p-6">
           <span className="rounded-full bg-[#800020] px-4 py-1 text-base font-bold text-[#FFF9F2]">

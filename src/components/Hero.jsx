@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Intro from "./Intro";
 import Stats from "./Stats";
+import Contribute from "./Contribute";
 
 export default function Hero() {
 
@@ -63,6 +64,7 @@ export default function Hero() {
                 downloads={downloads}
                 issues={issues}
             />
+            <Contribute issues={issues} />
 
         </>
 

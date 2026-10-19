@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Intro from "./Intro";
+import Stats from "./Stats";
 
 export default function Hero() {
 
@@ -27,11 +29,7 @@ export default function Hero() {
 
     return (
         <>
-            <header className="px-20 pt-8 text-center">
-                <h2 className="text-7xl font-bold">Build pages faster.</h2>
-                <p className="mt-5 text-2xl text-[#000000]">An open-source component kit for React.</p>
-                <p className="mt-2 text-xl text-[#000000]">Made by Gaille A. Amolong</p>
-            </header>
+            <Intro author="Gaille A. Amolong" />
 
             <div className="flex justify-center gap-4 py-6">
                 <button
@@ -60,20 +58,16 @@ export default function Hero() {
                 </button>
             </div>
 
-            <div className="flex justify-center gap-6 pb-8">
-                <div className="w-48 rounded-xl bg-[#F3E6D5] py-4 text-center">
-                <p className="text-4xl font-bold">{stars}</p>
-                <p className="mt-1 text-lg text-[#000000]">Stars</p>
-                </div>
-                <div className="w-48 rounded-xl bg-[#F3E6D5] py-4 text-center">
-                <p className="text-4xl font-bold">{downloads}</p>
-                <p className="mt-1 text-lg text-[#000000]">Downloads</p>
-                </div>
-                <div className="w-48 rounded-xl bg-[#F3E6D5] py-4 text-center">
-                <p className="text-4xl font-bold">{issues}</p>
-                <p className="mt-1 text-lg text-[#000000]">Issues reported</p>
-                </div>
-            </div>
+            <Stats 
+                stars={stars}
+                downloads={downloads}
+                issues={issues}
+                handleStar={handleStar}
+                handleDownload={handleDownload}
+                handleReport={handleReport}
+                handleReset={handleReset}
+            />
+
         </>
 
     );

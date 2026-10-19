@@ -62,10 +62,6 @@ export default function Hero() {
                 stars={stars}
                 downloads={downloads}
                 issues={issues}
-                handleStar={handleStar}
-                handleDownload={handleDownload}
-                handleReport={handleReport}
-                handleReset={handleReset}
             />
 
         </>
